@@ -1,0 +1,403 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* ========== Header css ================== */
+.header {
+  position: sticky;
+  top: 0;
+  right: 0;
+  min-height: 80px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #d80808;
+  z-index: 100;
+}
+
+.header-links ul {
+  height: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-links ul li a {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 0 10px;
+}
+
+.cart span {
+  margin: 3px;
+  font-size: 18px;
+  font-weight: 700;
+  vertical-align: super;
+  color: #fff;
+}
+
+/* ========= Home, About & Contact css ========== */
+.home-container,
+.about-container,
+.contact-container {
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.home-wrapper {
+  width: 400px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-heading {
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+}
+
+.home-desc {
+  padding: 20px 10px;
+  color: #463f3f;
+  font-size: 18px;
+}
+
+.home-links {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+}
+
+.home-links a {
+  color: #000;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 6px 0;
+}
+
+.home-links a:hover {
+  color: #d80808;
+}
+
+/* ============ About & Contact css =========== */
+
+.about-container h1,
+.contact-wrapper h1 {
+  text-align: center;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+}
+
+.form-item {
+  margin: 8px 10px;
+  padding: 10px 18px;
+  font-size: 20px;
+}
+
+.contact-form form button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: #f20b0b;
+  color: #fff;
+}
+
+.contact-form form button:hover {
+  background: #a80404;
+}
+
+/* ====================== SHOPPING CART CSS ==========================  */
+/* ======= product item css ========= */
+.products {
+  width: 80%;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  overflow: hidden;
+  padding: 10px 15px;
+  margin: 25px 20px;
+}
+
+.product-img {
+  width: 100%;
+  max-width: 300px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 200px;
+  display: block;
+}
+
+.product-name {
+  margin: 10px 0;
+}
+
+.product-price {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.add-product {
+  display: block;
+  outline: none;
+  width: 100%;
+  max-width: 200px;
+  background: #e82727;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+.add-product:hover {
+  background: #a80404;
+}
+
+.add-product:active {
+  transform: translateY(2px);
+}
+
+/* ============= Cart css ============== */
+.cart-items {
+  /* width: 600px; */
+  margin: 30px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.cart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 50px;
+  border-bottom: 1px solid #cccccc92;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.empty-cart {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.cart-item-img {
+  width: 100px;
+  margin-right: 12px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px 0 20px 20px;
+  margin-left: 5%;
+  font-size: 20px;
+}
+
+.item-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+}
+
+.cart-item-function {
+  display: flex;
+  flex-direction: row;
+  margin: 15px 10px;
+}
+
+.cart-item-function span {
+  font-size: 18px;
+  text-align: center;
+  padding-left: 8px;
+  font-weight: 700;
+}
+
+.remove-item,
+.add-item {
+  width: 30px;
+  margin: 0 8px;
+  border: none;
+  border: 2px solid #000;
+  color: #000;
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.cart-item-price {
+  padding: 0 12px;
+}
+
+.total-price {
+  padding: 18px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* ====================== TODO LIST CSS ==========================  */
+.todo-container {
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  padding: 30px 40px;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.task-input {
+  outline: none;
+  border: none;
+  border: 1px solid #ccc;
+  background: transparent;
+  width: 260px;
+  padding: 15px;
+  margin-right: 20px;
+  font-size: 20px;
+  color: #000;
+}
+
+.add-todo {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 20px;
+  border: 0;
+  outline: 0;
+  background: #0743e8;
+  color: #fff;
+  cursor: pointer;
+}
+
+.todo-list-item {
+  display: flex;
+  margin: 10px 0;
+  min-height: 30px;
+  padding: 10px;
+}
+
+.todo-complete,
+.todo-delete,
+.todo-edit {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: transparent;
+  font-size: 26px;
+}
+
+.todo-complete {
+  color: #049f09;
+  margin-right: 10px;
+  font-weight: 800;
+}
+
+.todo-edit {
+  color: #141830;
+  margin-right: 10px;
+}
+
+.todo-delete {
+  color: #d80808;
+}
+
+.complete {
+  text-decoration: line-through;
+  opacity: 0.5;
+  text-decoration-style: solid;
+  text-decoration-color: #e82727;
+}
+
+.todo-list {
+  width: 220px;
+  background: #30393e;
+  border: none;
+  font-size: 20px;
+  color: #fff;
+  padding-left: 10px;
+  margin-right: 15px;
+}
+
+.total-todos {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/*==================  Weather css ============== */
+.weather-container {
+  margin: 30px 30px 60px 30px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+}
+
+.weather-input {
+  padding: 10px 18px;
+  border: 1px solid #f20b0b;
+}
+
+.weather-btn {
+  margin: 10px;
+  background: #0743e8;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.weather-details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 12px;
+}
+
+.weather-details span {
+  font-size: 20px;
+  font-weight: 700;
+}
